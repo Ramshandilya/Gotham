@@ -19,12 +19,12 @@
 		0A956F1A1DD63EB900AABF64 /* OperationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0C1DD63EB900AABF64 /* OperationObserver.swift */; };
 		0A956F1B1DD63EB900AABF64 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0E1DD63EB900AABF64 /* JSONResource.swift */; };
 		0A956F1C1DD63EB900AABF64 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0F1DD63EB900AABF64 /* Resource.swift */; };
-		0A956F1D1DD63EB900AABF64 /* SignInResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F131DD63EB900AABF64 /* SignInResource.swift */; };
 		0A956F1E1DD63EB900AABF64 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F141DD63EB900AABF64 /* BaseOperation.swift */; };
-		0A956F201DD6404500AABF64 /* BackendJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F1F1DD6404500AABF64 /* BackendJSONService.swift */; };
 		0A956F221DD6416200AABF64 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F211DD6416200AABF64 /* ServiceOperation.swift */; };
 		0A956F261DD6481800AABF64 /* ResourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F251DD6481800AABF64 /* ResourceService.swift */; };
 		0A956F281DD648C300AABF64 /* ResourceFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F271DD648C300AABF64 /* ResourceFetchable.swift */; };
+		0A956F2A1DD680A200AABF64 /* BackendJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F291DD680A200AABF64 /* BackendJSONService.swift */; };
+		0A956F301DD681E500AABF64 /* SignInResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F2F1DD681E500AABF64 /* SignInResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +54,12 @@
 		0A956F0C1DD63EB900AABF64 /* OperationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationObserver.swift; sourceTree = "<group>"; };
 		0A956F0E1DD63EB900AABF64 /* JSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
 		0A956F0F1DD63EB900AABF64 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		0A956F131DD63EB900AABF64 /* SignInResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInResource.swift; sourceTree = "<group>"; };
 		0A956F141DD63EB900AABF64 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
-		0A956F1F1DD6404500AABF64 /* BackendJSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendJSONService.swift; sourceTree = "<group>"; };
 		0A956F211DD6416200AABF64 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		0A956F251DD6481800AABF64 /* ResourceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceService.swift; sourceTree = "<group>"; };
 		0A956F271DD648C300AABF64 /* ResourceFetchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceFetchable.swift; sourceTree = "<group>"; };
+		0A956F291DD680A200AABF64 /* BackendJSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendJSONService.swift; sourceTree = "<group>"; };
+		0A956F2F1DD681E500AABF64 /* SignInResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,29 +155,21 @@
 			isa = PBXGroup;
 			children = (
 				0A956F251DD6481800AABF64 /* ResourceService.swift */,
-				0A956F1F1DD6404500AABF64 /* BackendJSONService.swift */,
+				0A956F291DD680A200AABF64 /* BackendJSONService.swift */,
 				0A956F271DD648C300AABF64 /* ResourceFetchable.swift */,
 				0A956F141DD63EB900AABF64 /* BaseOperation.swift */,
 				0A956F211DD6416200AABF64 /* ServiceOperation.swift */,
-				0A956F111DD63EB900AABF64 /* AppOperations */,
-				0A956F121DD63EB900AABF64 /* AppServices */,
+				0A956F2E1DD681E500AABF64 /* AppResources */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
-		0A956F111DD63EB900AABF64 /* AppOperations */ = {
+		0A956F2E1DD681E500AABF64 /* AppResources */ = {
 			isa = PBXGroup;
 			children = (
+				0A956F2F1DD681E500AABF64 /* SignInResource.swift */,
 			);
-			path = AppOperations;
-			sourceTree = "<group>";
-		};
-		0A956F121DD63EB900AABF64 /* AppServices */ = {
-			isa = PBXGroup;
-			children = (
-				0A956F131DD63EB900AABF64 /* SignInResource.swift */,
-			);
-			path = AppServices;
+			path = AppResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,13 +279,13 @@
 			files = (
 				0A956F1C1DD63EB900AABF64 /* Resource.swift in Sources */,
 				0A956F191DD63EB900AABF64 /* Result.swift in Sources */,
-				0A956F201DD6404500AABF64 /* BackendJSONService.swift in Sources */,
 				0A956F281DD648C300AABF64 /* ResourceFetchable.swift in Sources */,
+				0A956F301DD681E500AABF64 /* SignInResource.swift in Sources */,
 				0A956F181DD63EB900AABF64 /* NetworkService.swift in Sources */,
 				0A956F261DD6481800AABF64 /* ResourceService.swift in Sources */,
 				0A956F1A1DD63EB900AABF64 /* OperationObserver.swift in Sources */,
-				0A956F1D1DD63EB900AABF64 /* SignInResource.swift in Sources */,
 				0A956F1E1DD63EB900AABF64 /* BaseOperation.swift in Sources */,
+				0A956F2A1DD680A200AABF64 /* BackendJSONService.swift in Sources */,
 				0A956F221DD6416200AABF64 /* ServiceOperation.swift in Sources */,
 				0A956EC81DD5118700AABF64 /* AppDelegate.swift in Sources */,
 				0A956F171DD63EB900AABF64 /* NetworkRequestable.swift in Sources */,
@@ -512,6 +504,7 @@
 				0A956EE31DD5118700AABF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A956EE41DD5118700AABF64 /* Build configuration list for PBXNativeTarget "GothamTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +513,7 @@
 				0A956EE61DD5118700AABF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

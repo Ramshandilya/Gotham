@@ -23,7 +23,7 @@ protocol ResourceService {
      - parameter resource:   The resource to fetch
      - parameter completion: A completion handler called with a Result type of the fetching computation
      */
-    func fetch(resource: ResourceItem, completion: (Result<ResourceItem.Model>) -> Void)
+    func fetch(resource: ResourceItem, completion: @escaping (Result<ResourceItem.Model>) -> Void)
     
     func cancel() 
 }

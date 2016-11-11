@@ -1,5 +1,5 @@
 //
-//  OnboardingService.swift
+//  SignInResource.swift
 //  Gotham
 //
 //  Created by Ramsundar Shandilya on 11/11/16.
@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+typealias SignInResourceOperation = ServiceOperation<BackendJSONService<SignInResource>>
 
 struct SignInRequest: NetworkRequestable {
     
@@ -44,6 +46,10 @@ struct SignInResource: JSONResource {
         self.password = password
         
         request = SignInRequest(parameters: ["email": email, "password": password])
+    }
+    
+    func model(fromJSONDictionary jsonDictionary: JSONDictionary) -> SignInItem? {
+        return nil
     }
 }
 
