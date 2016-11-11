@@ -94,4 +94,8 @@ final class NetworkService {
         
         task?.resume()
     }
+    
+    func cancel() {
+        task?.cancel()
+    }
 }

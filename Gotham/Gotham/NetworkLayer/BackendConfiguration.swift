@@ -13,8 +13,8 @@ fileprivate enum Server: String {
     case Staging = "http://52.39.62.12/staging"
     case Production = "http://52.25.202.94/prod/"
     
-    func baseURL() -> NSURL {
-        return NSURL(string: self.rawValue)!
+    func baseURL() -> URL {
+        return URL(string: self.rawValue)!
     }
 }
 
@@ -24,7 +24,7 @@ fileprivate enum Environment: Int {
     case Staging = 102
     case Production = 103
     
-    var baseURL: NSURL {
+    var baseURL: URL {
         switch self {
         case .Development:
             return Server.Development.baseURL()
@@ -66,9 +66,9 @@ public final class BackendConfiguration {
     
     public static var shared: BackendConfiguration = BackendConfiguration(baseURL: BackendConfiguration.environment.baseURL)
     
-    let baseURL: NSURL
+    let baseURL: URL
     
-    public init(baseURL: NSURL) {
+    public init(baseURL: URL) {
         self.baseURL = baseURL
     }
 }

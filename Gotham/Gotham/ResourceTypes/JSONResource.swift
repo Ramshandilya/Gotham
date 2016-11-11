@@ -19,6 +19,10 @@ enum JSONParsingError: Error {
 }
 
 protocol JSONResource: Resource {
+    
+    //TODO: May not be the right place to have this variable. Revisit.
+    var request: NetworkRequestable { get }
+    
     func model(fromJSONDictionary jsonDictionary: JSONDictionary) -> Model?
     func model(fromJSONArray jsonArray: JSONArray) -> Model?
 }

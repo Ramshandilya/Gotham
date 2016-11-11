@@ -8,18 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0A956EC81DD5118700AABF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EC71DD5118700AABF64 /* AppDelegate.swift */; };
-		0A956ECA1DD5118700AABF64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EC91DD5118700AABF64 /* ViewController.swift */; };
 		0A956ECD1DD5118700AABF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A956ECB1DD5118700AABF64 /* Main.storyboard */; };
 		0A956ECF1DD5118700AABF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A956ECE1DD5118700AABF64 /* Assets.xcassets */; };
 		0A956ED21DD5118700AABF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A956ED01DD5118700AABF64 /* LaunchScreen.storyboard */; };
 		0A956EDD1DD5118700AABF64 /* GothamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EDC1DD5118700AABF64 /* GothamTests.swift */; };
-		0A956EE81DD523DC00AABF64 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EE71DD523DC00AABF64 /* BaseOperation.swift */; };
-		0A956EEA1DD5249900AABF64 /* OperationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EE91DD5249900AABF64 /* OperationObserver.swift */; };
-		0A956EEC1DD5274900AABF64 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EEB1DD5274900AABF64 /* Resource.swift */; };
-		0A956EEE1DD528EB00AABF64 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EED1DD528EB00AABF64 /* Result.swift */; };
-		0A956EF01DD5290200AABF64 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EEF1DD5290200AABF64 /* JSONResource.swift */; };
-		0A956EF21DD52D1600AABF64 /* BackendConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EF11DD52D1600AABF64 /* BackendConfiguration.swift */; };
-		0A956EF41DD52FCA00AABF64 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956EF31DD52FCA00AABF64 /* NetworkService.swift */; };
+		0A956F151DD63EB900AABF64 /* BackendConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F061DD63EB900AABF64 /* BackendConfiguration.swift */; };
+		0A956F171DD63EB900AABF64 /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F081DD63EB900AABF64 /* NetworkRequestable.swift */; };
+		0A956F181DD63EB900AABF64 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F091DD63EB900AABF64 /* NetworkService.swift */; };
+		0A956F191DD63EB900AABF64 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0A1DD63EB900AABF64 /* Result.swift */; };
+		0A956F1A1DD63EB900AABF64 /* OperationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0C1DD63EB900AABF64 /* OperationObserver.swift */; };
+		0A956F1B1DD63EB900AABF64 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0E1DD63EB900AABF64 /* JSONResource.swift */; };
+		0A956F1C1DD63EB900AABF64 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F0F1DD63EB900AABF64 /* Resource.swift */; };
+		0A956F1D1DD63EB900AABF64 /* SignInResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F131DD63EB900AABF64 /* SignInResource.swift */; };
+		0A956F1E1DD63EB900AABF64 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F141DD63EB900AABF64 /* BaseOperation.swift */; };
+		0A956F201DD6404500AABF64 /* BackendJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F1F1DD6404500AABF64 /* BackendJSONService.swift */; };
+		0A956F221DD6416200AABF64 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F211DD6416200AABF64 /* ServiceOperation.swift */; };
+		0A956F261DD6481800AABF64 /* ResourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F251DD6481800AABF64 /* ResourceService.swift */; };
+		0A956F281DD648C300AABF64 /* ResourceFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F271DD648C300AABF64 /* ResourceFetchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,6 @@
 /* Begin PBXFileReference section */
 		0A956EC41DD5118700AABF64 /* Gotham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gotham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A956EC71DD5118700AABF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A956EC91DD5118700AABF64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A956ECC1DD5118700AABF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A956ECE1DD5118700AABF64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A956ED11DD5118700AABF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,13 +47,19 @@
 		0A956ED81DD5118700AABF64 /* GothamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GothamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A956EDC1DD5118700AABF64 /* GothamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GothamTests.swift; sourceTree = "<group>"; };
 		0A956EDE1DD5118700AABF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A956EE71DD523DC00AABF64 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
-		0A956EE91DD5249900AABF64 /* OperationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationObserver.swift; path = OperationObservers/OperationObserver.swift; sourceTree = "<group>"; };
-		0A956EEB1DD5274900AABF64 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		0A956EED1DD528EB00AABF64 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		0A956EEF1DD5290200AABF64 /* JSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
-		0A956EF11DD52D1600AABF64 /* BackendConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendConfiguration.swift; sourceTree = "<group>"; };
-		0A956EF31DD52FCA00AABF64 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0A956F061DD63EB900AABF64 /* BackendConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendConfiguration.swift; sourceTree = "<group>"; };
+		0A956F081DD63EB900AABF64 /* NetworkRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		0A956F091DD63EB900AABF64 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0A956F0A1DD63EB900AABF64 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0A956F0C1DD63EB900AABF64 /* OperationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationObserver.swift; sourceTree = "<group>"; };
+		0A956F0E1DD63EB900AABF64 /* JSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
+		0A956F0F1DD63EB900AABF64 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		0A956F131DD63EB900AABF64 /* SignInResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInResource.swift; sourceTree = "<group>"; };
+		0A956F141DD63EB900AABF64 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		0A956F1F1DD6404500AABF64 /* BackendJSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendJSONService.swift; sourceTree = "<group>"; };
+		0A956F211DD6416200AABF64 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
+		0A956F251DD6481800AABF64 /* ResourceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceService.swift; sourceTree = "<group>"; };
+		0A956F271DD648C300AABF64 /* ResourceFetchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceFetchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,15 +101,11 @@
 		0A956EC61DD5118700AABF64 /* Gotham */ = {
 			isa = PBXGroup;
 			children = (
+				0A956F051DD63EB900AABF64 /* NetworkLayer */,
+				0A956F0B1DD63EB900AABF64 /* OperationObservers */,
+				0A956F0D1DD63EB900AABF64 /* ResourceTypes */,
+				0A956F101DD63EB900AABF64 /* ServiceLayer */,
 				0A956EC71DD5118700AABF64 /* AppDelegate.swift */,
-				0A956EC91DD5118700AABF64 /* ViewController.swift */,
-				0A956EE71DD523DC00AABF64 /* BaseOperation.swift */,
-				0A956EE91DD5249900AABF64 /* OperationObserver.swift */,
-				0A956EEB1DD5274900AABF64 /* Resource.swift */,
-				0A956EEF1DD5290200AABF64 /* JSONResource.swift */,
-				0A956EF11DD52D1600AABF64 /* BackendConfiguration.swift */,
-				0A956EF31DD52FCA00AABF64 /* NetworkService.swift */,
-				0A956EED1DD528EB00AABF64 /* Result.swift */,
 				0A956ECB1DD5118700AABF64 /* Main.storyboard */,
 				0A956ECE1DD5118700AABF64 /* Assets.xcassets */,
 				0A956ED01DD5118700AABF64 /* LaunchScreen.storyboard */,
@@ -115,6 +121,63 @@
 				0A956EDE1DD5118700AABF64 /* Info.plist */,
 			);
 			path = GothamTests;
+			sourceTree = "<group>";
+		};
+		0A956F051DD63EB900AABF64 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0A956F061DD63EB900AABF64 /* BackendConfiguration.swift */,
+				0A956F091DD63EB900AABF64 /* NetworkService.swift */,
+				0A956F081DD63EB900AABF64 /* NetworkRequestable.swift */,
+				0A956F0A1DD63EB900AABF64 /* Result.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		0A956F0B1DD63EB900AABF64 /* OperationObservers */ = {
+			isa = PBXGroup;
+			children = (
+				0A956F0C1DD63EB900AABF64 /* OperationObserver.swift */,
+			);
+			path = OperationObservers;
+			sourceTree = "<group>";
+		};
+		0A956F0D1DD63EB900AABF64 /* ResourceTypes */ = {
+			isa = PBXGroup;
+			children = (
+				0A956F0E1DD63EB900AABF64 /* JSONResource.swift */,
+				0A956F0F1DD63EB900AABF64 /* Resource.swift */,
+			);
+			path = ResourceTypes;
+			sourceTree = "<group>";
+		};
+		0A956F101DD63EB900AABF64 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0A956F251DD6481800AABF64 /* ResourceService.swift */,
+				0A956F1F1DD6404500AABF64 /* BackendJSONService.swift */,
+				0A956F271DD648C300AABF64 /* ResourceFetchable.swift */,
+				0A956F141DD63EB900AABF64 /* BaseOperation.swift */,
+				0A956F211DD6416200AABF64 /* ServiceOperation.swift */,
+				0A956F111DD63EB900AABF64 /* AppOperations */,
+				0A956F121DD63EB900AABF64 /* AppServices */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		0A956F111DD63EB900AABF64 /* AppOperations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppOperations;
+			sourceTree = "<group>";
+		};
+		0A956F121DD63EB900AABF64 /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+				0A956F131DD63EB900AABF64 /* SignInResource.swift */,
+			);
+			path = AppServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,15 +285,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A956EF01DD5290200AABF64 /* JSONResource.swift in Sources */,
-				0A956EEE1DD528EB00AABF64 /* Result.swift in Sources */,
-				0A956EE81DD523DC00AABF64 /* BaseOperation.swift in Sources */,
-				0A956ECA1DD5118700AABF64 /* ViewController.swift in Sources */,
-				0A956EF41DD52FCA00AABF64 /* NetworkService.swift in Sources */,
+				0A956F1C1DD63EB900AABF64 /* Resource.swift in Sources */,
+				0A956F191DD63EB900AABF64 /* Result.swift in Sources */,
+				0A956F201DD6404500AABF64 /* BackendJSONService.swift in Sources */,
+				0A956F281DD648C300AABF64 /* ResourceFetchable.swift in Sources */,
+				0A956F181DD63EB900AABF64 /* NetworkService.swift in Sources */,
+				0A956F261DD6481800AABF64 /* ResourceService.swift in Sources */,
+				0A956F1A1DD63EB900AABF64 /* OperationObserver.swift in Sources */,
+				0A956F1D1DD63EB900AABF64 /* SignInResource.swift in Sources */,
+				0A956F1E1DD63EB900AABF64 /* BaseOperation.swift in Sources */,
+				0A956F221DD6416200AABF64 /* ServiceOperation.swift in Sources */,
 				0A956EC81DD5118700AABF64 /* AppDelegate.swift in Sources */,
-				0A956EF21DD52D1600AABF64 /* BackendConfiguration.swift in Sources */,
-				0A956EEC1DD5274900AABF64 /* Resource.swift in Sources */,
-				0A956EEA1DD5249900AABF64 /* OperationObserver.swift in Sources */,
+				0A956F171DD63EB900AABF64 /* NetworkRequestable.swift in Sources */,
+				0A956F151DD63EB900AABF64 /* BackendConfiguration.swift in Sources */,
+				0A956F1B1DD63EB900AABF64 /* JSONResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

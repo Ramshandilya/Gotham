@@ -16,5 +16,5 @@ protocol OperationObserver {
     func operationDidStart(_ operation: BaseOperation)
     
     /// Invoked as an `Operation` finishes, along with any errors produced during execution (or readiness evaluation).
-    func operationDidFinish(_ operation: BaseOperation, errors: [NSError])
+    func operationDidFinish(_ operation: BaseOperation, errors: [Error])
 }

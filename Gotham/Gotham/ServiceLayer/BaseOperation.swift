@@ -82,7 +82,7 @@ class BaseOperation: Operation {
         finish()
     }
     
-    final func finish(errors: [NSError] = []) {
+    final func finish(errors: [Error] = []) {
         self.isFinished = true
         self.isExecuting = false
         
@@ -91,7 +91,7 @@ class BaseOperation: Operation {
         }
     }
     
-    final override func cancel() {
+    override func cancel() {
         super.cancel()
         
         isCancelled = true
