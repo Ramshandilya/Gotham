@@ -10,14 +10,14 @@ import Foundation
 
 final class ServiceOperation <Service: ResourceService> : BaseOperation, ResourceFetchable {
     
-    typealias ResourceItem = Service.ResourceItem
-    typealias DidFinishFetchingResourceCallback = (ServiceOperation<Service>, Result<ResourceItem.Model>) -> Void
+    typealias ResourceType = Service.ResourceType
+    typealias DidFinishFetchingResourceCallback = (ServiceOperation<Service>, Result<ResourceType.Model>) -> Void
     
-    private let resource: ResourceItem
+    private let resource: ResourceType
     private let service: Service
     private let didFinishFetchingResourceCallback: DidFinishFetchingResourceCallback
     
-    init(resource: Service.ResourceItem, service: Service = Service(), didFinishFetchingResourceCallback: @escaping DidFinishFetchingResourceCallback) {
+    init(resource: Service.ResourceType, service: Service = Service(), didFinishFetchingResourceCallback: @escaping DidFinishFetchingResourceCallback) {
         self.resource = resource
         self.service = service
         self.didFinishFetchingResourceCallback = didFinishFetchingResourceCallback
@@ -34,7 +34,7 @@ final class ServiceOperation <Service: ResourceService> : BaseOperation, Resourc
         super.cancel()
     }
     
-    func didFinishFetchingResource(result: Result<ResourceItem.Model>) {
+    func didFinishFetchingResource(result: Result<ResourceType.Model>) {
         didFinishFetchingResourceCallback(self, result)
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 /// Define a type that is cancellable
 public protocol Cancellable: class {
     /// Returns whether or not the type has been cancelled
-    var cancelled: Bool { get }
+    var isCancelled: Bool { get }
 }
 
 public protocol Finishable: class {
@@ -25,7 +25,7 @@ public protocol Finishable: class {
 
 protocol ResourceFetchable: Cancellable, Finishable {
     
-    associatedtype ResourceItem: Resource
+    associatedtype ResourceType: Resource
     
     /**
      Fetches a resource using the provided service
@@ -33,21 +33,21 @@ protocol ResourceFetchable: Cancellable, Finishable {
      - parameter resource: The resource to fetch
      - parameter service:  The service to be used for fetching the resource
      */
-    func fetch<Service: ResourceService>(resource: ResourceItem, usingService service: Service) where Service.ResourceItem == ResourceItem
+    func fetch<Service: ResourceService>(resource: ResourceType, usingService service: Service) where Service.ResourceType == ResourceType
     
     /**
      Called when the operation has finished
      
      - parameter result: The result of the operation
      */
-    func didFinishFetchingResource(result: Result<ResourceItem.Model>)
+    func didFinishFetchingResource(result: Result<ResourceType.Model>)
 }
 
 extension ResourceFetchable {
     
-    func fetch<Service: ResourceService>(resource: ResourceItem, usingService service: Service) where Service.ResourceItem == ResourceItem {
+    func fetch<Service: ResourceService>(resource: ResourceType, usingService service: Service) where Service.ResourceType == ResourceType {
         
-        if cancelled { return }
+        if isCancelled { return }
         
         service.fetch(resource: resource) { [weak self] (result) in
             
@@ -55,7 +55,7 @@ extension ResourceFetchable {
                 
                 guard let strongSelf = self else { return }
                 
-                if strongSelf.cancelled { return }
+                if strongSelf.isCancelled { return }
                 
                 strongSelf.finish(errors: [])
                 strongSelf.didFinishFetchingResource(result: result)

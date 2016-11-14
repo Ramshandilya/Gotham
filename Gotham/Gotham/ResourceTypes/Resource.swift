@@ -13,5 +13,3 @@ public protocol Resource {
     associatedtype Model
 }
 
-/*************/
-
