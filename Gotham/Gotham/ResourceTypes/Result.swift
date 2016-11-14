@@ -15,6 +15,6 @@ import Foundation
  - Failure: Wraps with an error type.
  */
 public enum Result<T> {
-    case Success(T)
-    case Failure(Error)
+    case success(T)
+    case failure(Error)
 }

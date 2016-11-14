@@ -12,14 +12,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let signInResource = SignInResource(email: "johnny@apple.com", password: "TEST123")
+        
+        let signInOperation = SignInResourceOperation(resource: signInResource, didFinishFetchingResourceCallback: { (operation, result) in
+        
+            if case .success(let conferences) = result {
+                print(conferences)
+            } else {
+                print(result)
+            }
+            
+        })
+        
+        let operationQueue = OperationQueue()
+        operationQueue.addOperation(signInOperation)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

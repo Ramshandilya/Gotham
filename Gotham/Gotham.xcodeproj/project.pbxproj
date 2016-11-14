@@ -28,6 +28,7 @@
 		0A956F361DDA374C00AABF64 /* TimeoutObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F351DDA374C00AABF64 /* TimeoutObserver.swift */; };
 		0A956F381DDA38B500AABF64 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F371DDA38B500AABF64 /* NetworkObserver.swift */; };
 		0A956F3A1DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F391DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift */; };
+		0A956F3C1DDA3BD600AABF64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F3B1DDA3BD600AABF64 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		0A956F351DDA374C00AABF64 /* TimeoutObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutObserver.swift; sourceTree = "<group>"; };
 		0A956F371DDA38B500AABF64 /* NetworkObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkObserver.swift; sourceTree = "<group>"; };
 		0A956F391DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		0A956F3B1DDA3BD600AABF64 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +109,13 @@
 		0A956EC61DD5118700AABF64 /* Gotham */ = {
 			isa = PBXGroup;
 			children = (
+				0A956EC71DD5118700AABF64 /* AppDelegate.swift */,
+				0A956ECB1DD5118700AABF64 /* Main.storyboard */,
+				0A956F3B1DDA3BD600AABF64 /* ViewController.swift */,
 				0A956F051DD63EB900AABF64 /* NetworkLayer */,
 				0A956F0B1DD63EB900AABF64 /* OperationObservers */,
 				0A956F0D1DD63EB900AABF64 /* ResourceTypes */,
 				0A956F101DD63EB900AABF64 /* ServiceLayer */,
-				0A956EC71DD5118700AABF64 /* AppDelegate.swift */,
-				0A956ECB1DD5118700AABF64 /* Main.storyboard */,
 				0A956ECE1DD5118700AABF64 /* Assets.xcassets */,
 				0A956ED01DD5118700AABF64 /* LaunchScreen.storyboard */,
 				0A956ED31DD5118700AABF64 /* Info.plist */,
@@ -298,6 +301,7 @@
 				0A956F3A1DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift in Sources */,
 				0A956F1E1DD63EB900AABF64 /* BaseOperation.swift in Sources */,
 				0A956F2A1DD680A200AABF64 /* BackendJSONService.swift in Sources */,
+				0A956F3C1DDA3BD600AABF64 /* ViewController.swift in Sources */,
 				0A956F221DD6416200AABF64 /* ServiceOperation.swift in Sources */,
 				0A956EC81DD5118700AABF64 /* AppDelegate.swift in Sources */,
 				0A956F171DD63EB900AABF64 /* NetworkRequestable.swift in Sources */,

@@ -42,7 +42,7 @@ extension JSONResource {
     func result(fromData data: Data) -> Result<Model> {
         
         guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
-            return .Failure(JSONParsingError.invalidJSONData)
+            return .failure(JSONParsingError.invalidJSONData)
         }
         
         if let jsonDictionary = jsonObject as? JSONDictionary {
@@ -54,22 +54,22 @@ extension JSONResource {
         }
         
         // This is likely an impossible case since `JSONObjectWithData` likely only returns [String: AnyObject] or [AnyObject] but still needed to appease the compiler
-        return .Failure(JSONParsingError.unsupportedType)
+        return .failure(JSONParsingError.unsupportedType)
     }
     
     private func result(fromJSONDictionary jsonDictionary: JSONDictionary) -> Result<Model> {
         if let parsedResults = model(fromJSONDictionary: jsonDictionary) {
-            return .Success(parsedResults)
+            return .success(parsedResults)
         } else {
-            return .Failure(JSONParsingError.cannotParseJSONDictionary)
+            return .failure(JSONParsingError.cannotParseJSONDictionary)
         }
     }
     
     private func resultFrom(fromJSONArray jsonArray: JSONArray) -> Result<Model> {
         if let parsedResults = model(fromJSONArray: jsonArray) {
-            return .Success(parsedResults)
+            return .success(parsedResults)
         } else {
-            return .Failure(JSONParsingError.cannotParseJSONArray)
+            return .failure(JSONParsingError.cannotParseJSONArray)
         }
     }
 }
