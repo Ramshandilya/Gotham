@@ -34,7 +34,7 @@ extension BackendJSONService: ResourceService {
                         completion(resource.result(fromData: data!))
         },
                                       failure: { error in
-                                        let result = Result<Resource.Model>.Failure(error)
+                                        let result = Result<Resource.Model>.failure(error)
                                         completion(result)
         })
     }
