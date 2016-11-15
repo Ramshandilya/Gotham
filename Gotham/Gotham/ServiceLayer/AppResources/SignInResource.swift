@@ -24,9 +24,9 @@ struct SignInRequest: NetworkRequestable {
         return nil
     }
     
-    var parameters: [String : Any]?
+    var parameters: [String: Any]?
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return defaultJSONHeaders()
     }
 }
@@ -56,3 +56,4 @@ struct SignInResource: JSONResource {
 struct SignInItem {
     var token: String
 }
+

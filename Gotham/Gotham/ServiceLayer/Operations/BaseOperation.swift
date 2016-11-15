@@ -74,7 +74,6 @@ class BaseOperation: Operation {
         }
         
         execute()
-        
     }
     
     func execute() {
