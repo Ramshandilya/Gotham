@@ -25,7 +25,7 @@ public protocol Finishable: class {
 
 protocol ResourceFetchable: Cancellable, Finishable {
     
-    associatedtype ResourceType: Resource
+    associatedtype ResourceServiceType: ResourceService
     
     /**
      Fetches a resource using the provided service
@@ -33,19 +33,19 @@ protocol ResourceFetchable: Cancellable, Finishable {
      - parameter resource: The resource to fetch
      - parameter service:  The service to be used for fetching the resource
      */
-    func fetch<Service: ResourceService>(resource: ResourceType, usingService service: Service) where Service.ResourceType == ResourceType
+    func fetch(resource: ResourceServiceType.ResourceType, usingService service: ResourceServiceType)
     
     /**
      Called when the operation has finished
      
      - parameter result: The result of the operation
      */
-    func didFinishFetchingResource(result: Result<ResourceType.Model>)
+    func didFinishFetchingResource(result: Result<ResourceServiceType.ResourceType.Model>)
 }
 
 extension ResourceFetchable {
     
-    func fetch<Service: ResourceService>(resource: ResourceType, usingService service: Service) where Service.ResourceType == ResourceType {
+    func fetch(resource: ResourceServiceType.ResourceType, usingService service: ResourceServiceType) {
         
         if isCancelled { return }
         

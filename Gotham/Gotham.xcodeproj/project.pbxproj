@@ -29,6 +29,7 @@
 		0A956F4F1DDBB54200AABF64 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F4B1DDBB54200AABF64 /* BaseOperation.swift */; };
 		0A956F501DDBB54200AABF64 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F4C1DDBB54200AABF64 /* ServiceOperation.swift */; };
 		0A956F511DDBB54200AABF64 /* BackendJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F4E1DDBB54200AABF64 /* BackendJSONService.swift */; };
+		0A956F531DDD132500AABF64 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F521DDD132500AABF64 /* ImageResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0A956F4B1DDBB54200AABF64 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		0A956F4C1DDBB54200AABF64 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		0A956F4E1DDBB54200AABF64 /* BackendJSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendJSONService.swift; sourceTree = "<group>"; };
+		0A956F521DDD132500AABF64 /* ImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				0A956F331DDA371A00AABF64 /* Result.swift */,
 				0A956F0F1DD63EB900AABF64 /* Resource.swift */,
 				0A956F0E1DD63EB900AABF64 /* JSONResource.swift */,
+				0A956F521DDD132500AABF64 /* ImageResource.swift */,
 			);
 			path = ResourceTypes;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A956F531DDD132500AABF64 /* ImageResource.swift in Sources */,
 				0A956F1C1DD63EB900AABF64 /* Resource.swift in Sources */,
 				0A956F381DDA38B500AABF64 /* NetworkObserver.swift in Sources */,
 				0A956F511DDBB54200AABF64 /* BackendJSONService.swift in Sources */,

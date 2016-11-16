@@ -31,7 +31,7 @@ struct SignInRequest: NetworkRequestable {
     }
 }
 
-struct SignInResource: JSONResource {
+struct SignInResource: JSONDictionaryResource {
     
     typealias Model = SignInItem
     
