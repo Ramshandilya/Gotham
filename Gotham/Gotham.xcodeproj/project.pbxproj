@@ -22,7 +22,6 @@
 		0A956F341DDA371A00AABF64 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F331DDA371A00AABF64 /* Result.swift */; };
 		0A956F361DDA374C00AABF64 /* TimeoutObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F351DDA374C00AABF64 /* TimeoutObserver.swift */; };
 		0A956F381DDA38B500AABF64 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F371DDA38B500AABF64 /* NetworkObserver.swift */; };
-		0A956F3A1DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F391DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift */; };
 		0A956F3C1DDA3BD600AABF64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F3B1DDA3BD600AABF64 /* ViewController.swift */; };
 		0A956F481DDBB27C00AABF64 /* ResourceFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F461DDBB27C00AABF64 /* ResourceFetchable.swift */; };
 		0A956F491DDBB27C00AABF64 /* ResourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F471DDBB27C00AABF64 /* ResourceService.swift */; };
@@ -30,6 +29,7 @@
 		0A956F501DDBB54200AABF64 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F4C1DDBB54200AABF64 /* ServiceOperation.swift */; };
 		0A956F511DDBB54200AABF64 /* BackendJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F4E1DDBB54200AABF64 /* BackendJSONService.swift */; };
 		0A956F531DDD132500AABF64 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F521DDD132500AABF64 /* ImageResource.swift */; };
+		0A956F691DDD1F6600AABF64 /* BackgroundObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A956F681DDD1F6600AABF64 /* BackgroundObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		0A956F331DDA371A00AABF64 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0A956F351DDA374C00AABF64 /* TimeoutObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutObserver.swift; sourceTree = "<group>"; };
 		0A956F371DDA38B500AABF64 /* NetworkObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkObserver.swift; sourceTree = "<group>"; };
-		0A956F391DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		0A956F3B1DDA3BD600AABF64 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A956F411DDB8DE400AABF64 /* TestPlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestPlayGround.playground; sourceTree = "<group>"; };
 		0A956F461DDBB27C00AABF64 /* ResourceFetchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceFetchable.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		0A956F4C1DDBB54200AABF64 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		0A956F4E1DDBB54200AABF64 /* BackendJSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendJSONService.swift; sourceTree = "<group>"; };
 		0A956F521DDD132500AABF64 /* ImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
+		0A956F681DDD1F6600AABF64 /* BackgroundObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,6 @@
 				0A956ECE1DD5118700AABF64 /* Assets.xcassets */,
 				0A956ED01DD5118700AABF64 /* LaunchScreen.storyboard */,
 				0A956ED31DD5118700AABF64 /* Info.plist */,
-				0A956F391DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift */,
 				0A956F411DDB8DE400AABF64 /* TestPlayGround.playground */,
 			);
 			path = Gotham;
@@ -153,6 +152,7 @@
 				0A956F0C1DD63EB900AABF64 /* OperationObserver.swift */,
 				0A956F351DDA374C00AABF64 /* TimeoutObserver.swift */,
 				0A956F371DDA38B500AABF64 /* NetworkObserver.swift */,
+				0A956F681DDD1F6600AABF64 /* BackgroundObserver.swift */,
 			);
 			path = OperationObservers;
 			sourceTree = "<group>";
@@ -321,6 +321,7 @@
 				0A956F531DDD132500AABF64 /* ImageResource.swift in Sources */,
 				0A956F1C1DD63EB900AABF64 /* Resource.swift in Sources */,
 				0A956F381DDA38B500AABF64 /* NetworkObserver.swift in Sources */,
+				0A956F691DDD1F6600AABF64 /* BackgroundObserver.swift in Sources */,
 				0A956F511DDBB54200AABF64 /* BackendJSONService.swift in Sources */,
 				0A956F361DDA374C00AABF64 /* TimeoutObserver.swift in Sources */,
 				0A956F301DD681E500AABF64 /* SignInResource.swift in Sources */,
@@ -328,7 +329,6 @@
 				0A956F501DDBB54200AABF64 /* ServiceOperation.swift in Sources */,
 				0A956F341DDA371A00AABF64 /* Result.swift in Sources */,
 				0A956F1A1DD63EB900AABF64 /* OperationObserver.swift in Sources */,
-				0A956F3A1DDA390A00AABF64 /* NetworkActivityIndicatorManager.swift in Sources */,
 				0A956F481DDBB27C00AABF64 /* ResourceFetchable.swift in Sources */,
 				0A956F3C1DDA3BD600AABF64 /* ViewController.swift in Sources */,
 				0A956F4F1DDBB54200AABF64 /* BaseOperation.swift in Sources */,
