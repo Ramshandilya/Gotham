@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol NetworkRequestable {
+
     var endpoint: String { get }
     var method: HTTPMethod { get }
     var queryItems: [URLQueryItem]? { get }
@@ -17,7 +18,19 @@ public protocol NetworkRequestable {
 }
 
 extension NetworkRequestable {
-    func defaultJSONHeaders() -> [String: String] {
+    private func defaultJSONHeaders() -> [String: String] {
         return ["Content-Type": "application/json"]
+    }
+    
+    var headers: [String: String]? {
+        return defaultJSONHeaders()
+    }
+    
+    var queryItems: [URLQueryItem]? {
+        return nil
+    }
+    
+    var parameters: [String: Any]? {
+        return nil
     }
 }

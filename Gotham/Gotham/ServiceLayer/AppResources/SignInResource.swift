@@ -20,15 +20,7 @@ struct SignInRequest: NetworkRequestable {
         return HTTPMethod.post
     }
     
-    var queryItems: [URLQueryItem]? {
-        return nil
-    }
-    
     var parameters: [String: Any]?
-    
-    var headers: [String: String]? {
-        return defaultJSONHeaders()
-    }
 }
 
 struct SignInResource: JSONDictionaryResource {
