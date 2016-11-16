@@ -1,2 +1,2 @@
 # Gotham
-Experiments with lightweight network layer in Swift 3.0
+Experiments with lightweight network+service layer in Swift 3.0
