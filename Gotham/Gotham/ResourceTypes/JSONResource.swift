@@ -8,36 +8,38 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: Any]
-typealias JSONArray = [JSONDictionary]
+public typealias JSONDictionary = [String: Any]
+public typealias JSONArray = [JSONDictionary]
 
 enum JSONParsingError: Error {
     case invalidJSONData
     case cannotParseJSONDictionary
     case cannotParseJSONArray
     case unsupportedType
+    case notAJSONDictionary
+    case notAJSONArray
 }
 
-protocol JSONResource: Resource {
+//MARK:- JSONDictionaryResource
+/**
+ *  Defines a generic JSON Resource type. NOT to be used directly. Use either `JSONDictionaryResource` or `JSONArrayResource`
+ */
+public protocol JSONResource: DataResource {
     
     //TODO: May not be the right place to have this variable. Revisit.
     var request: NetworkRequestable { get }
+}
+
+//MARK:- JSONDictionaryResource
+/**
+ *  Defines a specific Resource type used for JSON dictionary (i.e.[String : Any]) resources
+ */
+public protocol JSONDictionaryResource: JSONResource {
     
     func model(fromJSONDictionary jsonDictionary: JSONDictionary) -> Model?
-    func model(fromJSONArray jsonArray: JSONArray) -> Model?
 }
 
-extension JSONResource {
-    func model(fromJSONDictionary jsonDictionary: JSONDictionary) -> Model? {
-        return nil
-    }
-    
-    func model(fromJSONArray jsonArray: JSONArray) -> Model? {
-        return nil
-    }
-}
-
-extension JSONResource {
+extension JSONDictionaryResource {
     
     func result(fromData data: Data) -> Result<Model> {
         
@@ -45,33 +47,44 @@ extension JSONResource {
             return .failure(JSONParsingError.invalidJSONData)
         }
         
-        if let jsonDictionary = jsonObject as? JSONDictionary {
-            return result(fromJSONDictionary: jsonDictionary)
+        guard let jsonDictionary = jsonObject as? JSONDictionary else {
+            return .failure(JSONParsingError.notAJSONDictionary)
         }
         
-        if let jsonArray = jsonObject as? JSONArray {
-            return resultFrom(fromJSONArray: jsonArray)
-        }
-        
-        // This is likely an impossible case since `JSONObjectWithData` likely only returns [String: AnyObject] or [AnyObject] but still needed to appease the compiler
-        return .failure(JSONParsingError.unsupportedType)
-    }
-    
-    private func result(fromJSONDictionary jsonDictionary: JSONDictionary) -> Result<Model> {
-        if let parsedResults = model(fromJSONDictionary: jsonDictionary) {
-            return .success(parsedResults)
-        } else {
+        guard let parsedResults = model(fromJSONDictionary: jsonDictionary) else {
             return .failure(JSONParsingError.cannotParseJSONDictionary)
         }
-    }
-    
-    private func resultFrom(fromJSONArray jsonArray: JSONArray) -> Result<Model> {
-        if let parsedResults = model(fromJSONArray: jsonArray) {
-            return .success(parsedResults)
-        } else {
-            return .failure(JSONParsingError.cannotParseJSONArray)
-        }
+        
+        return .success(parsedResults)
     }
 }
 
 
+//MARK:- JSONArrayResource
+/**
+ *  Defines a specific ResourceType used for JSON array (i.e.[Any]) resources
+ */
+protocol JSONArrayResource: JSONResource {
+    
+    func model(fromJSONArray jsonArray: JSONArray) -> Model?
+}
+
+extension JSONArrayResource {
+    
+    func result(fromData data: Data) -> Result<Model> {
+        
+        guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+            return .failure(JSONParsingError.invalidJSONData)
+        }
+        
+        guard let jsonArray = jsonObject as? JSONArray else {
+            return .failure(JSONParsingError.notAJSONArray)
+        }
+        
+        guard let parsedResults = model(fromJSONArray: jsonArray) else {
+            return .failure(JSONParsingError.cannotParseJSONArray)
+        }
+        
+        return .success(parsedResults)
+    }
+}

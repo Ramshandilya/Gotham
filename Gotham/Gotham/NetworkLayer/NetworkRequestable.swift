@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NetworkRequestable {
+public protocol NetworkRequestable {
     var endpoint: String { get }
     var method: HTTPMethod { get }
     var queryItems: [URLQueryItem]? { get }
