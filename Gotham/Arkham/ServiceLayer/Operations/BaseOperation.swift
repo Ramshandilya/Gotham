@@ -8,19 +8,20 @@
 
 import UIKit
 
-class BaseOperation: Operation {
+open class BaseOperation: Operation {
     
-    override var isAsynchronous: Bool {
+    override open var isAsynchronous: Bool {
         return true
     }
     
     //Executing
     private var _executing: Bool = false
-    override var isExecuting: Bool {
+    override open var isExecuting: Bool {
         get { return _executing }
         set {
             willChangeValue(forKey: "isExecuting")
-            _executing = newValue
+            _executing =
+            newValue
             didChangeValue(forKey: "isExecuting")
             if _cancelled == true {
                 self.isFinished = true
@@ -30,7 +31,7 @@ class BaseOperation: Operation {
     
     //Finished
     private var _finished: Bool = false
-    override var isFinished: Bool {
+    override open var isFinished: Bool {
         get { return _finished }
         set {
             willChangeValue(forKey: "isFinished")
@@ -41,7 +42,7 @@ class BaseOperation: Operation {
     
     //Cancelled
     private var _cancelled: Bool = false
-    override var isCancelled: Bool {
+    override open var isCancelled: Bool {
         get { return _cancelled }
         set {
             willChangeValue(forKey: "isCancelled")
@@ -57,12 +58,12 @@ class BaseOperation: Operation {
         observers.append(observer)
     }
     
-    final override func start() {
+    public final override func start() {
         super.start()
         isExecuting = true
     }
     
-    final override func main() {
+    public final override func main() {
         if isCancelled {
             isExecuting = false
             isFinished = true
@@ -76,12 +77,12 @@ class BaseOperation: Operation {
         execute()
     }
     
-    func execute() {
+    open func execute() {
         assertionFailure("execute must be overriden")
         finish()
     }
     
-    final func finish(errors: [Error] = []) {
+    public final func finish(errors: [Error] = []) {
         self.isFinished = true
         self.isExecuting = false
         
@@ -90,7 +91,7 @@ class BaseOperation: Operation {
         }
     }
     
-    override func cancel() {
+    open override func cancel() {
         super.cancel()
         
         isCancelled = true

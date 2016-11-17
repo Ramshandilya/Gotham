@@ -8,16 +8,16 @@
 
 import Foundation
 
-final class ServiceOperation <T: ResourceService> : BaseOperation, ResourceFetchable {
+public final class ServiceOperation <T: ResourceService> : BaseOperation, ResourceFetchable {
     
-    typealias ResourceServiceType = T
-    typealias DidFinishFetchingResourceCallback = (ServiceOperation<ResourceServiceType>, Result<ResourceServiceType.ResourceType.Model>) -> Void
+    public typealias ResourceServiceType = T
+    public typealias DidFinishFetchingResourceCallback = (ServiceOperation<ResourceServiceType>, Result<ResourceServiceType.ResourceType.Model>) -> Void
     
     private let resource: ResourceServiceType.ResourceType
     private let service: ResourceServiceType
     private let didFinishFetchingResourceCallback: DidFinishFetchingResourceCallback
     
-    init(resource: ResourceServiceType.ResourceType, service: ResourceServiceType = ResourceServiceType(), didFinishFetchingResourceCallback: @escaping DidFinishFetchingResourceCallback) {
+    public init(resource: ResourceServiceType.ResourceType, service: ResourceServiceType = ResourceServiceType(), didFinishFetchingResourceCallback: @escaping DidFinishFetchingResourceCallback) {
         
         self.resource = resource
         self.service = service
@@ -26,16 +26,16 @@ final class ServiceOperation <T: ResourceService> : BaseOperation, ResourceFetch
         super.init()
     }
     
-    override func execute() {
+    public override func execute() {
         fetch(resource: resource, usingService: service)
     }
     
-    override func cancel() {
+    public override func cancel() {
         service.cancel()
         super.cancel()
     }
     
-    func didFinishFetchingResource(result: Result<ResourceServiceType.ResourceType.Model>) {
+    public func didFinishFetchingResource(result: Result<ResourceServiceType.ResourceType.Model>) {
         didFinishFetchingResourceCallback(self, result)
     }
 }

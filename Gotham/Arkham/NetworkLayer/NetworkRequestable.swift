@@ -17,7 +17,7 @@ public protocol NetworkRequestable {
     var headers: [String: String]? { get }
 }
 
-extension NetworkRequestable {
+public extension NetworkRequestable {
     private func defaultJSONHeaders() -> [String: String] {
         return ["Content-Type": "application/json"]
     }

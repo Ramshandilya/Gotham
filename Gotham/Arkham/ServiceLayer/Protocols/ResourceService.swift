@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ResourceService {
+public protocol ResourceService {
     
     associatedtype ResourceType: Resource
     

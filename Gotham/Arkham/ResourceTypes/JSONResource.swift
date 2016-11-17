@@ -11,7 +11,7 @@ import Foundation
 public typealias JSONDictionary = [String: Any]
 public typealias JSONArray = [JSONDictionary]
 
-enum JSONParsingError: Error {
+public enum JSONParsingError: Error {
     case invalidJSONData
     case cannotParseJSONDictionary
     case cannotParseJSONArray
@@ -39,7 +39,7 @@ public protocol JSONDictionaryResource: JSONResource {
     func model(fromJSONDictionary jsonDictionary: JSONDictionary) -> Model?
 }
 
-extension JSONDictionaryResource {
+public extension JSONDictionaryResource {
     
     func result(fromData data: Data) -> Result<Model> {
         
@@ -64,12 +64,12 @@ extension JSONDictionaryResource {
 /**
  *  Defines a specific ResourceType used for JSON array (i.e.[Any]) resources
  */
-protocol JSONArrayResource: JSONResource {
+public protocol JSONArrayResource: JSONResource {
     
     func model(fromJSONArray jsonArray: JSONArray) -> Model?
 }
 
-extension JSONArrayResource {
+public extension JSONArrayResource {
     
     func result(fromData data: Data) -> Result<Model> {
         

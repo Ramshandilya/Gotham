@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Arkham
 
 typealias SignInResourceOperation = ServiceOperation<BackendJSONService<SignInResource>>
 

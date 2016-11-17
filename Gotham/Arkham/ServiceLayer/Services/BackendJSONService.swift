@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class BackendJSONService <Resource: JSONResource> {
+public final class BackendJSONService <Resource: JSONResource> {
     
     fileprivate var configuration: BackendConfiguration
     fileprivate let networkService = NetworkService()
@@ -20,11 +20,11 @@ final class BackendJSONService <Resource: JSONResource> {
 
 extension BackendJSONService: ResourceService {
     
-    convenience init() {
+    convenience public init() {
         self.init(BackendConfiguration.shared)
     }
     
-    func fetch(resource: Resource, completion: @escaping (Result<Resource.Model>) -> Void) {
+    public func fetch(resource: Resource, completion: @escaping (Result<Resource.Model>) -> Void) {
         
         let request = resource.request
         let url = configuration.baseURL.appendingPathComponent(request.endpoint)
@@ -39,7 +39,7 @@ extension BackendJSONService: ResourceService {
         })
     }
     
-    func cancel() {
+    public func cancel() {
         networkService.cancel()
     }
 }
